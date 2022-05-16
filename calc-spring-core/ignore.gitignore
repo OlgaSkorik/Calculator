@@ -2,6 +2,6 @@
 calc-spring-core.iml
 log/
 target/
-src/test/
+.test/
 ignore.gitignore
 pom.xml
