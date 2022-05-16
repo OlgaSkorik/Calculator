@@ -1,4 +1,4 @@
-package org.example.reader;
+package org.example.working_with_console;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
