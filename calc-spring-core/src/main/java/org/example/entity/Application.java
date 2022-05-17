@@ -89,7 +89,6 @@ public class Application {
                     userNameReg, userLoginReg, userPasswordReg));
             ConsoleWriter.successfulReg();
             auth();
-            ConsoleWriter.successfulAuthOrReg();
             inWork = true;
         } else {
             ConsoleWriter.regFailed();
