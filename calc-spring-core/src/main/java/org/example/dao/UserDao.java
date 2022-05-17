@@ -11,19 +11,6 @@ public class UserDao {
 
     private final List<User> store = new ArrayList<>();
 
-    public User getUserByLoginPassword(String login, String password) {
-
-        User result = new User();
-        result.setId(-1);
-
-        for (User user : store) {
-            if (user.getLogin().equals(login) && user.getPassword().equals(password)) {
-                result = user;
-            }
-        }
-        return result;
-    }
-
     public boolean add(User user) {
 
         for (User u : store) {
