@@ -2,16 +2,23 @@ package org.example.entity;
 
 import org.springframework.stereotype.Component;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.util.Objects;
 
 @Component
+@Entity
 public class Operation {
 
+    @Id
     private long id;
     private String operation;
     private double num1;
     private double num2;
     private double result;
+    @ManyToOne(cascade = CascadeType.ALL)
     private User user;
 
     public Operation(long id, String operation, double num1, double num2, double result, User user) {
@@ -21,6 +28,10 @@ public class Operation {
         this.num2 = num2;
         this.result = result;
         this.user = user;
+    }
+
+    public Operation() {
+
     }
 
     public long getId() {
