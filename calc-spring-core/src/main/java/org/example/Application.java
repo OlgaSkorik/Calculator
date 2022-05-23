@@ -1,23 +1,21 @@
-package org.example.entity;
+package org.example;
 
-import org.example.dao.UserDao;
+import org.example.dao.InMemoryUserDao;
+import org.example.entity.User;
 import org.example.working_with_console.ConsoleReader;
 import org.example.service.CalculatorService;
 import org.example.working_with_console.ConsoleWriter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Application {
 
-    @Autowired
     private ConsoleReader consoleReader;
-    @Autowired
-    private UserDao userDao;
+    private InMemoryUserDao userDao;
 
     private boolean inWork = false;
 
-    public Application(ConsoleReader consoleReader, UserDao userDao) {
+    public Application(ConsoleReader consoleReader, InMemoryUserDao userDao) {
         this.consoleReader = consoleReader;
         this.userDao = userDao;
     }
@@ -85,7 +83,7 @@ public class Application {
         ConsoleWriter.enterPassword();
         String userPasswordReg = consoleReader.scannerStr();
         if (!userDao.userIsExist(userLoginReg, userPasswordReg)) {
-            userDao.add(new User(userDao.getStore().size() + 1,
+            userDao.save(new User(userDao.getMap().size() + 1,
                     userNameReg, userLoginReg, userPasswordReg));
             ConsoleWriter.successfulReg();
             auth();

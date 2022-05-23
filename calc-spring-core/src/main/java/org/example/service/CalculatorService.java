@@ -1,8 +1,6 @@
 package org.example.service;
 
-import org.springframework.stereotype.Component;
 
-@Component
 public class CalculatorService {
 
     public static double addition(double num1, double num2) {

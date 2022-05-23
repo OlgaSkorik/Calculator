@@ -1,8 +1,6 @@
 package org.example.working_with_console;
 
-import org.springframework.stereotype.Component;
 
-@Component
 public class ConsoleWriter {
 
     public static void selectAuthOrReg() {

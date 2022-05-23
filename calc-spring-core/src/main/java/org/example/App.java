@@ -1,7 +1,6 @@
 package org.example;
 
 import org.example.configuration.RootConfiguration;
-import org.example.entity.Application;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
