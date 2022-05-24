@@ -67,7 +67,7 @@ public class RootConfiguration {
     private Properties hibernateProperties() {
         Properties hibernateProperties = new Properties();
         hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
-        hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         hibernateProperties.setProperty("hibernate.show_sql", "true");
         return hibernateProperties;
     }
