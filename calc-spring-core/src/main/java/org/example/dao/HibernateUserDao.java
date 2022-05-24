@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class HibernateUserStorage implements UserDao{
+public class HibernateUserDao implements UserDao{
 
     @Autowired
     private SessionFactory sessionFactory;
